@@ -12,6 +12,10 @@ import androidx.core.view.WindowInsetsCompat;
 
 import org.w3c.dom.Text;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Locale;
+
 public class MainActivity extends AppCompatActivity {
 
     private static final String TAG = "Lifecycle_app";
@@ -78,9 +82,13 @@ public class MainActivity extends AppCompatActivity {
         updateTextView("onRestart() called");
     }
 
-    private void updateTextView(String message){
+    private void updateTextView(String message) {
+        // Get the current timestamp
+        String timestamp = new SimpleDateFormat("HH:mm:ss", Locale.getDefault()).format(new Date());
+        // Get the existing text
         String currentText = lifecycleTextView.getText().toString();
-        String updatedText = currentText + "\n" + message;
+        // Append the new message with the timestamp
+        String updatedText = currentText + "\n" + "[" + timestamp + "] " + message;
         lifecycleTextView.setText(updatedText);
     }
 }
