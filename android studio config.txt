@@ -1,0 +1,19 @@
+//libs.version.toml
+agp = "8.7.2"
+junit = "4.13.2"
+junitVersion = "1.2.1"
+espressoCore = "3.6.1"
+appcompat = "1.7.0"
+material = "1.12.0"
+activity = "1.8.0"
+constraintlayout = "2.2.0"
+
+//build.gradle app level
+android {
+    namespace 'com.example.lab5_2'
+    compileSdk 34
+
+    defaultConfig {
+        applicationId "com.example.lab5_2"
+        minSdk 29
+        targetSdk 34

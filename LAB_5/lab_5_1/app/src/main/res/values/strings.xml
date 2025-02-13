@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">lab_5_1</string>
+    <string-array name="vehicle_types">
+        <item>Car</item>
+        <item>Bike</item>
+        <item>Bus</item>
+        <item>Truck</item>
+    </string-array>
+</resources>
