@@ -16,8 +16,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
-    private ListView listView;
-    private AppAdapter adapter;
     private List<ApplicationInfo> appList;
 
     @Override
@@ -25,9 +23,11 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        listView = findViewById(R.id.listView);
+        ListView listView = findViewById(R.id.listView);
         appList = getPackageManager().getInstalledApplications(PackageManager.GET_META_DATA);
-        adapter = new AppAdapter(this, appList);
+
+
+        AppAdapter adapter = new AppAdapter(this, appList);
         listView.setAdapter(adapter);
 
         listView.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
